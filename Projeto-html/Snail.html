@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnailCorreios - Cadastro</title>
+    <link rel="icon" href="Fotos/mascote2.png" type="image/x-icon">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #4A90E2;
+        }
+        .mascote {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .mascote img {
+            max-width: 150px;
+            height: auto;
+            border-radius: 8px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-group textarea {
+            resize: vertical;
+        }
+        .form-group button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4A90E2;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background-color: #357ABD;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="mascote">
+        <img src="Fotos/mascote1.jpg" alt="Mascote do SnailCorreios">
+    </div>
+    <h1>Cadastro SnailCorreios</h1>
+    <form action="/submit-form" method="post">
+        <div class="form-group">
+            <label for="name">Nome Completo</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="age">Idade</label>
+            <input type="number" id="age" name="age" required>
+        </div>
+        <div class="form-group">
+            <label for="address">Endereço</label>
+            <input type="text" id="street" name="street" placeholder="Rua" required>
+            <input type="text" id="neighborhood" name="neighborhood" placeholder="Bairro" required>
+            <input type="text" id="number" name="number" placeholder="Número" required>
+        </div>
+        <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Telefone</label>
+            <input type="text" id="phone" name="phone" pattern="\d{1,11}" maxlength="11" placeholder="Digite seu telefone" required>
+            <small>Por favor, insira um número de telefone válido (apenas números).</small>
+        </div>
+        <div class="form-group">
+            <label for="payment">Forma de Pagamento</label>
+            <select id="payment" name="payment" required>
+                <option value="credit-card">Cartão de Crédito</option>
+                <option value="debit-card">Cartão de Débito</option>
+                <option value="paypal">PayPal</option>
+                <option value="bank-transfer">Transferência Bancária</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <button type="submit">Enviar</button>
+        </div>
+    </form>
+</div>
+
+
+<footer></footer>
+    <p>&copy; 2024 SnailCorreios - "Entregas lentas, mas com muito carinho!"</p>
+</footer>
+
+</body>
+</html>
+
+
